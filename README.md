@@ -2,11 +2,17 @@
 
 E-Commerce Platform
 
+## Installation (locally)
+
+Install the required dependencies for the project:
+
+    pip install -r requirements/local.txt
+
 ## Run (locally)
 
 You can run the application locally and access it under `localhost:8000`:
 
-    python manage.py runserver
+    python manage.py runserver --settings=config.settings.local
 
 ## Development
 
