@@ -16,6 +16,10 @@ You can run the application locally and access it under `localhost:8000`:
 
 ## Development
 
+Migrate database:
+
+    python manage.py migrate --settings=config.settings.local
+
 Write project dependencies to `requirements.txt`:
 
     pip freeze > requirements.txt
