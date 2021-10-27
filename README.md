@@ -1,6 +1,6 @@
 # ecom
 
-E-Commerce Platform
+A highly configurable e-commerce platform implemented on Django.
 
 ## Installation (locally)
 
