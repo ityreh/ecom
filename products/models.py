@@ -3,7 +3,10 @@ from django.db.models.deletion import CASCADE
 
 
 class Product(models.Model):
+    # add a product id
     label = models.CharField(max_length=200)
+    # TODO: set now as default
+    # TODO: set timezone
     publish_date = models.DateTimeField('date published')
     size = models.CharField(max_length=10)
     price = models.FloatField()
