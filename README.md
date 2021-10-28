@@ -43,6 +43,7 @@ If you have any problems using this tool or feature reqeusts, please feel free t
 ### 1.3.0
 
 - [ ] Search
+- [ ] Internationalize
 
 ## Contributing
 
@@ -75,6 +76,14 @@ Write project dependencies to `requirements.txt`:
 Add a new app:
 
     python manage.py startapp <app_name>
+
+Create DB migrations for new models:
+
+    python manage.py makemigrations --settings=config.settings.local
+
+Migrate model changes:
+
+    python manage.py migrate --settings=config.settings.local
 
 ## Authors and acknowledgement
 
