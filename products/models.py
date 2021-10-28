@@ -8,15 +8,24 @@ class Product(models.Model):
     price = models.FloatField()
     quantity = models.IntegerField(default=0)
 
+    def __str__(self):
+        return self.label
+
 
 class Fabric(models.Model):
     label = models.CharField(max_length=200)
     product = models.ManyToManyField(Product)
 
+    def __str__(self):
+        return self.label
+
 
 class Pattern(models.Model):
     label = models.CharField(max_length=200)
     product = models.OneToOneField(Product, on_delete=CASCADE)
+
+    def __str__(self):
+        return self.label
 
 
 class ProductImage(models.Model):
@@ -24,14 +33,23 @@ class ProductImage(models.Model):
     image = models.ImageField()
     product = models.ForeignKey(Product, on_delete=CASCADE)
 
+    def __str__(self):
+        return self.label
+
 
 class FabricImage(models.Model):
     label = models.CharField(max_length=200)
     image = models.ImageField()
     fabric = models.ForeignKey(Fabric, on_delete=CASCADE)
 
+    def __str__(self):
+        return self.label
+
 
 class PatternImage(models.Model):
     label = models.CharField(max_length=200)
     image = models.ImageField()
     pattern = models.ForeignKey(Pattern, on_delete=CASCADE)
+
+    def __str__(self):
+        return self.label

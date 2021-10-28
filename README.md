@@ -89,6 +89,10 @@ Migrate model changes:
 
     python manage.py migrate --settings=config.settings.local
 
+Create an admin user:
+
+    python manage.py createsuperuser --settings=config.settings.local
+
 ## Authors and acknowledgement
 
 - [Ityreh](https://github.com/ityreh)
