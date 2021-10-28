@@ -5,6 +5,7 @@ from django.db.models.deletion import CASCADE
 class Product(models.Model):
     label = models.CharField(max_length=200)
     publish_date = models.DateTimeField('date published')
+    size = models.CharField(max_length=10)
     price = models.FloatField()
     quantity = models.IntegerField(default=0)
 
