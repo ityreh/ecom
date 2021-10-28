@@ -21,7 +21,7 @@ def get_env_variable(var_name):
 BASE_DIR = root()
 MEDIA_ROOT = root('media')
 STATIC_ROOT = root('static_root')
-STATIC_URL = '/static/' #TODO:
+STATIC_URL = '/static/'  # TODO:
 STATICFILES_DIRS = [root('static')]
 
 SECRET_KEY = get_env_variable('SECRET_KEY')
@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'products.apps.ProductsConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

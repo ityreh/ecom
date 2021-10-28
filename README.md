@@ -24,7 +24,7 @@ If you have any problems using this tool or feature reqeusts, please feel free t
 - [ ] Admin-page for product management
 - [ ] Donate-Button
 
-### 1.0.0
+### 0.1.0
 
 - [ ] Accountmanagement with admin-page
 - [ ] Shopping cart
@@ -32,18 +32,22 @@ If you have any problems using this tool or feature reqeusts, please feel free t
 - [ ] Help page
 - [ ] Blog
 
-### 1.1.0
+### 0.2.0
 
 - [ ] Saisons
 
-### 1.2.0
+### 0.3.0
 
 - [ ] Extra: product configurator
 
-### 1.3.0
+### 0.4.0
 
 - [ ] Search
 - [ ] Internationalize
+
+### 1.0.0
+
+- [ ] Configurable for every product you can imagine
 
 ## Contributing
 
