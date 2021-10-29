@@ -1,15 +1,27 @@
 {% extends 'base.html' %}
 
-{% block content %}
+{% block products %}
 
-{% if product_list %}
-    <ul>
-    {% for product in product_list %}
-        <li><a href="{% url 'products:detail' product.id %}">{{ product.label }}</a></li>
-    {% endfor %}
-    </ul>
-{% else %}
+<div class="container">
+    {% if product_list %}
+    <div class="row">
+        {% for product in product_list %}
+        <div class="col" style="padding-top: 50px">
+            <div class="card" style="width: 18rem;">
+                <img src="https://placeholder.pics/svg/300" class="card-img-top" alt="..."><a
+                    href="{% url 'products:detail' product.id %}"></a></img>
+                <div class="card-body">
+                    <h5 class="card-title">{{ product.label }}</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    {% else %}
     <p>No products are available.</p>
-{% endif %}
-
-{% endblock content %}
+    {% endif %}
+    {% endblock products %}
+</div>
