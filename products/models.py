@@ -1,13 +1,15 @@
+import datetime
+import uuid
+
 from django.db import models
 from django.db.models.deletion import CASCADE
 
 
 class Product(models.Model):
-    # add a product id
+    product_id = models.UUIDField(default=uuid.uuid4, editable=False)
     label = models.CharField(max_length=200)
-    # TODO: set now as default
-    # TODO: set timezone
-    publish_date = models.DateTimeField('date published')
+    publish_date = models.DateTimeField(
+        default=datetime.datetime.now(), editable=False)
     size = models.CharField(max_length=10)
     price = models.FloatField()
     quantity = models.IntegerField(default=0)
