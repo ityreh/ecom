@@ -83,11 +83,15 @@ Add a new app:
 
 Create DB migrations for new models:
 
-    python manage.py makemigrations --settings=config.settings.local
+    python manage.py makemigrations
 
 Migrate model changes:
 
     python manage.py migrate --settings=config.settings.local
+
+Bring migrations to heel:
+
+    python manage.py squashmigrations <app_name> <migrations_index> --settings=config.settings.local
 
 Create an admin user:
 
