@@ -69,10 +69,6 @@ Make sure you have a DB instance running locally and well configured.
 
 ### Development
 
-Migrate database:
-
-    python manage.py migrate --settings=config.settings.local
-
 Write project dependencies to `requirements.txt`:
 
     pip freeze > requirements.txt
@@ -83,7 +79,7 @@ Add a new app:
 
 Create DB migrations for new models:
 
-    python manage.py makemigrations
+    python manage.py makemigrations <app_name> --settings=config.settings.local
 
 Migrate model changes:
 

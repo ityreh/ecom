@@ -2,3 +2,4 @@
 
 coverage==5.5
 django-debug-toolbar==3.2.2
+autopep8=1.6.0
