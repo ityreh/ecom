@@ -20,7 +20,13 @@ class Image(TimeStampedModel):
 
 
 class Product(TimeStampedImageModel):
-    STATUS = Choices('anounced', 'available', 'sold', 'orderable')
+    class Status(models.TextChoices):
+        ANNOUNCED = 'an', 'announced'
+        AVAILABLE = 'av', 'available'
+        SOLD = 'so', 'sold'
+        ORDERABLE = 'or', 'orderable'
+
+    STATUS = Status.choices
 
     uuid = UUIDField(primary_key=True, version=4, editable=False)
     label = models.CharField(max_length=200)
