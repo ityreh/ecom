@@ -7,3 +7,4 @@ django-model-utils==4.2.0
 pillow==8.4.0
 docutils==0.18
 django-grappelli==2.15.3
+django-admin-honeypot==1.1.0
