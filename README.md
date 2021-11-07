@@ -93,6 +93,10 @@ Create an admin user:
 
     python manage.py createsuperuser --settings=config.settings.local
 
+Collect media files:
+
+    python manage.py collectstatic --settings=config.settings.local
+
 ## Authors and acknowledgement
 
 - [Ityreh](https://github.com/ityreh)
