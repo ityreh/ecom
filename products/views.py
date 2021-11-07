@@ -4,7 +4,7 @@ from .models import Product
 
 
 def index(request):
-    product_list = Product.objects.order_by('-publish_date')[:12]
+    product_list = Product.objects.order_by('-created')[:12]
     context = {'product_list': product_list}
     return render(request, 'products/index.html', context)
 

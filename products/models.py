@@ -28,7 +28,6 @@ class Product(TimeStampedImageModel):
 
     STATUS = Status.choices
 
-    uuid = UUIDField(primary_key=True, version=4, editable=False)
     label = models.CharField(max_length=200)
     size = models.CharField(max_length=10)
     price = models.FloatField()
